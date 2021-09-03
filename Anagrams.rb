@@ -27,13 +27,16 @@ def second_anagrams?(str1, str2)
 end
 
 # O(n^2) - Time
-# O() - Space
+# O(n) - Space
 
 
 
 def third_anagram?(str1, str2)
     str1.split('').sort == str2.split('').sort
 end
+
+# O(n^2) - Time 
+# O(log(n)) - Space
 
 def fourth_anagram?(str1, str2)
     counter_1 = Hash.new(0)
@@ -44,6 +47,9 @@ def fourth_anagram?(str1, str2)
 
     counter_1 == counter_2
 end
+
+# O(n) - Time 
+# O(n) - Space
 
 p third_anagram?("elvis", "lives")
 p second_anagrams?("elvis", "lives")
