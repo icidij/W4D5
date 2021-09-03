@@ -8,10 +8,10 @@ def my_min_v1(arr)
     min = arr.first
 
     # debugger
-    arr.each do |num1|
-        dup_arr = arr.dup
-        dup_arr.delete(num1)
-        min = num1 if dup_arr.all?{|ele| ele > num1}
+    arr.each do |num1| #n
+        dup_arr = arr.dup 
+        dup_arr.delete(num1) #n 
+        min = num1 if dup_arr.all?{|ele| ele > num1} #n
         
         # min < num1 ? min : min = num1
     end
@@ -31,9 +31,9 @@ end
 def lgsv1(arr) 
 
     subarrays = []
-    arr.each_index do |i1|
-        (i1...arr.length).each do |i2|
-            subarrays << arr[i1..i2]
+    arr.each_index do |i1| 
+        (i1...arr.length).each do |i2| 
+            subarrays << arr[i1..i2]  
         end
     end
 
@@ -51,7 +51,7 @@ def lgsv2(arr)
 
     current_sum = arr.first
     (1...arr.length).each do |i|
-        if arr[i] < 0
+        if current_sum < 0
             current_sum = 0
         end
         current_sum += arr[i]
@@ -61,6 +61,7 @@ def lgsv2(arr)
     end
     largest_sum
 end
+
 
 
 
